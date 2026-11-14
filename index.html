@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quodix Privacy Policy</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.25rem 4rem;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #e8e8e8; background: #121212; }
+    a { color: #8ab4f8; }
+  }
+  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
+  h2 { font-size: 1.15rem; margin-top: 2.2rem; }
+  .updated { color: #666; font-size: 0.9rem; margin-bottom: 2rem; }
+  @media (prefers-color-scheme: dark) { .updated { color: #999; } }
+  ul { padding-left: 1.3rem; }
+  li { margin-bottom: 0.4rem; }
+</style>
+</head>
+<body>
+<h1>Quodix Privacy Policy</h1>
+<p class="updated">Last updated: November 14, 2026</p>
+
+<p>
+  Quodix is an Android app for tradespeople to write quotes and invoices, take card payments,
+  and keep job photos. This page describes what data the app handles, where it is kept, and
+  why. Quodix is provided by Stanislav Shestak ("we", "us").
+</p>
+
+<h2>The short version</h2>
+<ul>
+  <li>Your quotes, invoices, clients and photos are stored <strong>on your phone</strong>. The
+    app works fully without an account.</li>
+  <li>If you sign in, we keep a small account record. If you are on the Pro plan, a backup of
+    your quotes, invoices, clients and business details is kept in our cloud database.</li>
+  <li><strong>Photos and signatures never go to our servers.</strong> Pro can copy photos to
+    <em>your own</em> Google Drive, which only you control.</li>
+  <li>Card payments are processed by Stripe. We never see or store card numbers.</li>
+  <li>There is no advertising and no analytics or tracking SDK in the app. We do not sell or
+    share your data for advertising.</li>
+</ul>
+
+<h2>Data stored on your phone</h2>
+<p>
+  Everything you create in Quodix lives in the app's private storage on your device: your
+  business profile (name, address, phone, email, logo, colours and footer text), your clients
+  (names, phone numbers, email and postal addresses, notes), quotes and invoices with their line
+  items and totals, payment status, job photos, and signatures captured on the phone. You can
+  export all of it at any time from Account &rarr; Your data, with or without an account; the
+  export is shared through Android's own share sheet, at your direction.
+</p>
+<p>
+  Android's own device backup may include the app's data in your Google account backup,
+  as it does for most apps. That backup is run and stored by Google under your Google account,
+  not by us.
+</p>
+
+<h2>Account (optional)</h2>
+<p>
+  An account is needed only for card payments and cloud backup. You can sign in with Google or
+  with an email address and password. Sign-in is handled by Google Firebase Authentication,
+  which stores your email address, a user ID, and (for Google sign-in) your Google account's
+  name and profile picture link. Passwords are stored by Firebase in hashed form; we cannot
+  read them.
+</p>
+<p>
+  Our account record holds your user ID, the ID of your Stripe account if you connect one, your
+  plan status (for example, whether Pro is active and when it ends), and the ID of the phone
+  currently set as your main phone for backup.
+</p>
+
+<h2>Cloud backup (Pro plan)</h2>
+<p>
+  On the Pro plan, Quodix backs up your business details, clients, and quotes and invoices
+  (including line items, totals, payment status and payment links) to Google Cloud Firestore,
+  in the United States. Photos, signature images and your logo are <strong>not</strong>
+  included. The backup exists so you can restore your records onto a new phone.
+</p>
+<p>
+  If your Pro plan ends, the backup is kept for 45 days after the end of your paid period (or
+  37 days after a payment failure puts the subscription on hold) and is then deleted; the app
+  warns you before this happens. Everything stays on your phone either way.
+</p>
+
+<h2>Photo backup to your Google Drive (Pro, optional)</h2>
+<p>
+  If you turn it on, Quodix copies your job photos and signatures into a "Quodix photos"
+  folder in <strong>your own</strong> Google Drive. The app asks for Google's
+  <code>drive.file</code> permission, which only lets it see files it created itself; it
+  cannot see anything else in your Drive. The files go straight from your phone to Google
+  Drive and never pass through our servers. You can remove the app's access at any time from
+  your Google account's third-party connections; files already in your Drive stay yours.
+</p>
+
+<h2>Card payments (Stripe)</h2>
+<p>
+  If you set up payments, you connect your own Stripe account through Stripe's onboarding.
+  Stripe collects the identity, business and bank details it needs to pay you, under
+  <a href="https://stripe.com/privacy">Stripe's Privacy Policy</a>; we receive only your Stripe
+  account ID and its status (for example, whether it can accept charges).
+</p>
+<p>
+  When your customer pays by a payment link or by tapping a card on your phone (Tap to Pay),
+  the card details are handled entirely by Stripe. We never receive full card numbers. The app
+  keeps the payment link and, for a tap payment, the card application name and ID that appear
+  on an EMV receipt.
+</p>
+<p>
+  Tap to Pay requires your phone's approximate location, which Stripe uses to confirm where
+  in-person payments happen, as card networks require. The app asks for location permission
+  only when you start a tap payment. We do not store your location.
+</p>
+
+<h2>Subscriptions (Google Play)</h2>
+<p>
+  Plans are bought through Google Play Billing. Google processes the payment; we never see your
+  payment card. To confirm a Pro subscription, our server checks the purchase with Google and
+  stores the purchase token linked to your account, along with the subscription's status and
+  dates. The app links a purchase to your account with a one-way hash of your user ID, not your
+  email address.
+</p>
+
+<h2>App integrity</h2>
+<p>
+  Quodix uses Firebase App Check with Google Play Integrity to confirm that requests to our
+  servers come from a genuine copy of the app. This sends device and app integrity signals to
+  Google; it does not identify you personally.
+</p>
+
+<h2>Permissions and why they're needed</h2>
+<ul>
+  <li><strong>Camera</strong> &mdash; to take job photos inside the app. Photos are saved in the
+    app's private storage.</li>
+  <li><strong>Approximate location</strong> &mdash; required by Stripe for Tap to Pay; asked only
+    when you take a tap payment.</li>
+  <li><strong>Notifications</strong> &mdash; to warn you about your plan, for example before a
+    cloud backup is deleted or when a payment needs attention.</li>
+  <li><strong>Audio settings</strong> &mdash; requested by Stripe's Tap to Pay software, which the
+    app includes for in-person card payments.</li>
+</ul>
+
+<h2>Your clients' information</h2>
+<p>
+  The details you enter about your own customers are yours. You decide what to record, and you
+  are responsible for having a lawful reason to keep it. We do not use your customers' details
+  for any purpose of our own and never contact them; the only messages they receive are the
+  quotes, invoices and payment links you choose to send.
+</p>
+
+<h2>Sharing</h2>
+<p>
+  We share data only with the service providers that run the features above &mdash; Google
+  (Firebase Authentication, Cloud Firestore, Cloud Functions, App Check, Google Play, and Google
+  Drive at your request) and Stripe &mdash; and only for those purposes, or where the law
+  requires it. We do not sell personal data.
+</p>
+
+<h2>Deleting your data</h2>
+<ul>
+  <li><strong>Delete account</strong> (Account screen) deletes your sign-in, our account record
+    and your cloud backup, and deactivates any open payment links. It does not touch the data on
+    your phone, your Google Drive photos, or your Stripe account, which you can close from
+    Stripe.</li>
+  <li>Uninstalling the app deletes everything stored on the phone. Export first if you want a
+    copy.</li>
+  <li>Deleting your account does not cancel a Google Play subscription; cancel it in Google
+    Play.</li>
+</ul>
+<p>
+  You can also ask us to delete your account or tell you what we hold about you at the address
+  below.
+</p>
+
+<h2>Security</h2>
+<p>
+  Data in our cloud is encrypted in transit and at rest by Google. Access rules let each account
+  read and write only its own records, and our server alone can change plan status.
+</p>
+
+<h2>Children's privacy</h2>
+<p>
+  Quodix is a business tool. It is not directed at children and does not knowingly collect data
+  from children.
+</p>
+
+<h2>Changes to this policy</h2>
+<p>
+  If this policy changes, the update will be posted on this page with a revised date above.
+</p>
+
+<h2>Contact</h2>
+<p>
+  Questions about this policy or your data can be sent to
+  <a href="mailto:ss.app.dev.studio@gmail.com">ss.app.dev.studio@gmail.com</a>. See also our
+  <a href="terms.html">Terms of Service</a>.
+</p>
+</body>
+</html>
