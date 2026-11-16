@@ -29,7 +29,7 @@
 </head>
 <body>
 <h1>Quodix Privacy Policy</h1>
-<p class="updated">Last updated: November 14, 2026</p>
+<p class="updated">Last updated: November 15, 2026</p>
 
 <p>
   Quodix is an Android app for tradespeople to write quotes and invoices, take card payments,
@@ -110,15 +110,11 @@
   account ID and its status (for example, whether it can accept charges).
 </p>
 <p>
-  When your customer pays by a payment link or by tapping a card on your phone (Tap to Pay),
-  the card details are handled entirely by Stripe. We never receive full card numbers. The app
-  keeps the payment link and, for a tap payment, the card application name and ID that appear
-  on an EMV receipt.
-</p>
-<p>
-  Tap to Pay requires your phone's approximate location, which Stripe uses to confirm where
-  in-person payments happen, as card networks require. The app asks for location permission
-  only when you start a tap payment. We do not store your location.
+  Your customer pays on Stripe's own payment page, reached through a payment link or QR code you
+  send them. Stripe processes the payment and pays it directly into your own Stripe account;
+  Quodix never receives or holds the money and never receives card numbers. The app keeps the
+  payment link and reads the payment's status from Stripe to show whether an invoice was paid.
+  Refunds are made in your Stripe dashboard.
 </p>
 
 <h2>Subscriptions (Google Play)</h2>
@@ -141,12 +137,8 @@
 <ul>
   <li><strong>Camera</strong> &mdash; to take job photos inside the app. Photos are saved in the
     app's private storage.</li>
-  <li><strong>Approximate location</strong> &mdash; required by Stripe for Tap to Pay; asked only
-    when you take a tap payment.</li>
   <li><strong>Notifications</strong> &mdash; to warn you about your plan, for example before a
     cloud backup is deleted or when a payment needs attention.</li>
-  <li><strong>Audio settings</strong> &mdash; requested by Stripe's Tap to Pay software, which the
-    app includes for in-person card payments.</li>
 </ul>
 
 <h2>Your clients' information</h2>
