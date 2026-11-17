@@ -29,7 +29,7 @@
 </head>
 <body>
 <h1>Quodix Privacy Policy</h1>
-<p class="updated">Last updated: November 15, 2026</p>
+<p class="updated">Last updated: November 17, 2026</p>
 
 <p>
   Quodix is an Android app for tradespeople to write quotes and invoices, take card payments,
@@ -40,10 +40,10 @@
 <h2>The short version</h2>
 <ul>
   <li>Your quotes, invoices, clients and photos are stored <strong>on your phone</strong>. The
-    app works fully without an account.</li>
+    app supports local quoting and invoicing without a Quodix account.</li>
   <li>If you sign in, we keep a small account record. If you are on the Pro plan, a backup of
     your quotes, invoices, clients and business details is kept in our cloud database.</li>
-  <li><strong>Photos and signatures never go to our servers.</strong> Pro can copy photos to
+  <li><strong>Photos and signature images never go to our servers.</strong> Pro can copy photos to
     <em>your own</em> Google Drive, which only you control.</li>
   <li>Card payments are processed by Stripe. We never see or store card numbers.</li>
   <li>There is no advertising and no analytics or tracking SDK in the app. We do not sell or
@@ -87,9 +87,14 @@
   included. The backup exists so you can restore your records onto a new phone.
 </p>
 <p>
-  If your Pro plan ends, the backup is kept for 45 days after the end of your paid period (or
-  37 days after a payment failure puts the subscription on hold) and is then deleted; the app
-  warns you before this happens. Everything stays on your phone either way.
+  After Pro ends through cancellation or expiration, cloud backup is scheduled for deletion
+  45 days after Pro access ends. If a failed payment puts the subscription on hold, deletion
+  is scheduled 37 days after the hold begins. Pausing Pro stops new backups but does not by
+  itself schedule deletion; if the subscription later ends or enters payment hold, the
+  corresponding retention period applies. Reactivating Pro before scheduled deletion cancels
+  that deletion. You can restore an existing backup without Pro while it remains available.
+  The copy on your phone is not affected.
+  The app can show reminders before scheduled deletion.
 </p>
 
 <h2>Photo backup to your Google Drive (Pro, optional)</h2>
@@ -111,9 +116,10 @@
 </p>
 <p>
   Your customer pays on Stripe's own payment page, reached through a payment link or QR code you
-  send them. Stripe processes the payment and pays it directly into your own Stripe account;
-  Quodix never receives or holds the money and never receives card numbers. The app keeps the
-  payment link and reads the payment's status from Stripe to show whether an invoice was paid.
+  send them. Stripe processes the payment directly into your own Stripe account. Quodix does
+  not hold customer funds or receive card numbers. Stripe deducts and transfers Quodix's
+  platform fee as described in the <a href="terms.html">Terms of Service</a>. The app keeps the
+  payment link and reads payment status from Stripe to show whether an invoice was paid.
   Refunds are made in your Stripe dashboard.
 </p>
 
